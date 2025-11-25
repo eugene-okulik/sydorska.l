@@ -13,7 +13,7 @@ my_dict = {
 print(my_dict['tuple'][-1])
 my_dict['list'].append('add new item to the end')
 my_dict['list'].pop(1)
-my_dict['dict'].update({'i am a tuple': 'blabla'})
+my_dict['dict'].update({('i am a tuple',): ('blabla')})
 my_dict['dict'].pop('status')
 my_dict['set'].add('hello')
 my_dict['set'].remove(None)
