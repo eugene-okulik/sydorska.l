@@ -1,6 +1,7 @@
-def func (line):
+def func(line):
     for num in line:
         return int(line[line.index(':') + 1:].strip()) + 10
+
 
 line_1 = 'результат операции: 42'
 line_2 = 'результат операции: 514'
