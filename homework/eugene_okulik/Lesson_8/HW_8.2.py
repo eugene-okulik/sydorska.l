@@ -14,5 +14,5 @@ for num in gen:
 
     if counter == max(position):
         break
-    
+
     counter += 1
