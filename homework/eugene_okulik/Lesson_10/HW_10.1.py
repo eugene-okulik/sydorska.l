@@ -21,6 +21,7 @@ def test2():
 def test3():
     print('123')
 
+
 test1()
 test2()
 test3()
