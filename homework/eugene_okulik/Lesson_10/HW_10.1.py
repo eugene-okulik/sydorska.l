@@ -6,13 +6,16 @@ def decor(func):
 
     return wrapper
 
+
 @decor
 def test1():
     print('First test')
 
+
 @decor
 def test2():
     print('Second test')
+
 
 @decor
 def test3():

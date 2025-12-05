@@ -13,6 +13,7 @@ def calc_main(func):
 
     return wrapper
 
+
 @calc_main
 def calc(first, second, operation):
     if operation == '+':
@@ -24,7 +25,8 @@ def calc(first, second, operation):
     elif operation == '/':
         return first / second
 
-first = int(input(f'Enter first number here: '))
-second = int(input(f'Enter second number here: '))
+
+first = int(input('Enter first number here: '))
+second = int(input('Enter second number here: '))
 
 print(calc(first, second))
