@@ -2,7 +2,6 @@ class Book:
     material = 'paper'
     text = True
 
-
     def __init__(self, name_of_the_book, autor, total_pages, _ISBN, reserved):
         self.name_of_the_book = name_of_the_book
         self.autor = autor
@@ -10,12 +9,13 @@ class Book:
         self._ISBN = _ISBN
         self.reserved = reserved
 
-
     def __str__(self):
         if self.reserved:
-            return f'Book name: {self.name_of_the_book}, Autor: {self.autor}, Total pages: {self.total_pages}, Material: {self.material}, reserved'
+            return f'Book name: {self.name_of_the_book}, Autor: {self.autor}, Total pages: {self.total_pages}, n\
+                Material: {self.material}, reserved'
         else:
-            return f'Book name: {self.name_of_the_book}, Autor: {self.autor}, Total pages: {self.total_pages}, Material: {self.material}'
+            return f'Book name: {self.name_of_the_book}, Autor: {self.autor}, Total pages: {self.total_pages}, n\
+                Material: {self.material}'
 
 
 class School_Books(Book):
@@ -23,19 +23,19 @@ class School_Books(Book):
     grade = 4
     exercises = bool
 
-
     def __init__(self, name_of_the_book, autor, total_pages, _ISBN, reserved, subject, grade, exercises):
         super().__init__(name_of_the_book, autor, total_pages, _ISBN, reserved)
         self.subject = subject
         self.grade = grade
         self.exercises = exercises
 
-
     def __str__(self):
         if self.reserved:
-            return f'Name: {self.subject}, Autor: {self.autor}, Total pages: {self.total_pages}, Subject: {self.subject}, reserved'
+            return f'Name: {self.subject}, Autor: {self.autor}, Total pages: {self.total_pages}, n\
+                Subject: {self.subject}, reserved'
         else:
-            return f'Name: {self.subject}, Autor: {self.autor}, Total pages: {self.total_pages}, Subject: {self.subject}'
+            return f'Name: {self.subject}, Autor: {self.autor}, Total pages: {self.total_pages}, n\
+                Subject: {self.subject}'
 
 
 first_book = Book('Story of my life', 'Shevchenko', 234, 'OS1435328', True)
