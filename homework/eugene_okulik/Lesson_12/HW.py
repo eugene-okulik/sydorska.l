@@ -6,17 +6,21 @@ class Flowers:
         self.price = price
         self.live_days = live_days
 
+
 class Roses(Flowers):
     def __init__(self, freshes, color, long, price):
         super().__init__(freshes, color, long, price, live_days=7)
+
 
 class Tulips(Flowers):
     def __init__(self, freshes, color, long, price):
         super().__init__(freshes, color, long, price, live_days=4)
 
+
 class Peonys(Flowers):
     def __init__(self, freshes, color, long, price):
         super().__init__(freshes, color, long, price, live_days=4)
+
 
 class Bouquet:
     def __init__(self):
@@ -52,7 +56,6 @@ class Bouquet:
                 result.append(f)
                 return result
 
-    
     def find_by_color(self, color):
         result = []
         for f in self.flowers:
