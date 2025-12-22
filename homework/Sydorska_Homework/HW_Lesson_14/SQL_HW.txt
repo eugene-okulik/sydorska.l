@@ -1,47 +1,63 @@
-INSERT INTO students(name, second_name, group_id) VALUES ('Liuba', 'Syd', 21699)
+INSERT INTO students(name, second_name)
+VALUES ('Liuba', 'Sydor')
+
+Select *
+from students s where s.name = 'Liuba' and s.second_name = 'Sydor'
 
 INSERT INTO books(title, taken_by_student_id)
-VALUES('SQL', 21931);
+VALUES('SQL_1', 21933);
+
+INSERT INTO books(title, taken_by_student_id)
+VALUES('SQL_2', 21933);
 
 INSERT INTO `groups`(title, start_date, end_date)
-VALUES('Dec2025', 'December 1, 2025', 'December 31, 2025');
+VALUES('Dec2025new', 'December 1, 2025', 'December 31, 2025');
 
-INSERT INTO subjects(title) VALUES('sub_1_LS');
-Select * from subjects s where title = 'sub_2_LS'
+Select * from `groups` g where g.title = 'Dec2025new'
 
-INSERT INTO subjects(title) VALUES('sub_2_LS');
+UPDATE students SET group_id = 21701 WHERE id = 21933;
+
+INSERT INTO subjects(title)
+VALUES('sub1_LS');
+
+INSERT INTO subjects(title)
+VALUES('sub2_LS');
+
+Select * from subjects s where title = 'sub1_LS'
+
+Select * from subjects s where title = 'sub2_LS'
 
 INSERT INTO lessons(title, subject_id)
-VALUES('less1LS', 13335);
+VALUES('less5LS', 13337);
 
 INSERT INTO lessons(title, subject_id)
-VALUES('less2LS', 13335);
+VALUES('less6LS', 13337);
 
 INSERT INTO lessons(title, subject_id)
-VALUES('less3LS', 13336);
+VALUES('less7LS', 13338);
 
 INSERT INTO lessons(title, subject_id)
-VALUES('less4LS', 13336);
+VALUES('less8LS', 13338);
 
-Select * from lessons l where l.subject_id = 13335
+Select * from lessons l where l.subject_id = 13337
 
-Select * from lessons l where l.subject_id = 13336
-
-INSERT INTO marks(value, lesson_id, student_id)
-VALUES('A', 74008, 21931);
+Select * from lessons l where l.subject_id = 13338
 
 INSERT INTO marks(value, lesson_id, student_id)
-VALUES('A', 74009, 21931);
+VALUES('A', 74012, 21933);
 
 INSERT INTO marks(value, lesson_id, student_id)
-VALUES('A', 74010, 21931);
+VALUES('B', 74013, 21933);
 
 INSERT INTO marks(value, lesson_id, student_id)
-VALUES('A', 74011, 21931);
+VALUES('C', 74014, 21933);
 
-Select * from marks m where student_id = 21931
+INSERT INTO marks(value, lesson_id, student_id)
+VALUES('A', 74015, 21933);
 
-Select * from books b where taken_by_student_id = 21931
+Select * from marks m where student_id = 21933
+
+Select * from books b where taken_by_student_id = 21933
 
 Select * from students s 
 JOIN `groups` g on s.group_id = g.id
@@ -49,4 +65,4 @@ JOIN books b on s.id = b.taken_by_student_id
 JOIN marks m on s.id = m.student_id
 JOIN lessons l on m.lesson_id = l.id
 JOIN subjects on l.subject_id = subjects.id
-where name = 'Liuba'
+where s.id = 21933
