@@ -13,7 +13,7 @@ cursor = db.cursor(dictionary=True)
 
 cursor.execute("INSERT INTO students (name, second_name) VALUES ('Liuba', 'Sydorska')")
 student_id = cursor.lastrowid
-cursor.execute("SELECT * from students where id = %s", 
+cursor.execute("SELECT * from students where id = %s",
                (student_id,))
 print(cursor.fetchone())
 
@@ -25,7 +25,7 @@ values_1 = [
 ]
 cursor.executemany(querly_1, values_1)
 
-cursor.execute('''INSERT INTO 
+cursor.execute('''INSERT INTO
                `groups`(title, start_date, end_date)
                VALUES('Dec2025LS', '2025-12-01', '2025-12-31')''')
 group_id = cursor.lastrowid
@@ -76,7 +76,7 @@ cursor.execute("Select * from books b where taken_by_student_id = %s",
                (student_id,))
 print(cursor.fetchall())
 
-join_querly = '''Select * 
+join_querly = '''Select *
 from students s
 JOIN `groups` g on s.group_id = g.id
 JOIN books b on s.id = b.taken_by_student_id
