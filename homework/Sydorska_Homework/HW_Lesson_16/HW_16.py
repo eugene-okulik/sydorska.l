@@ -54,4 +54,3 @@ with open(hw_file_path, newline='', encoding="utf-8") as csv_file:
 for row in file_data:
     if tuple(row) not in db_row_set:
         print(row)
-
