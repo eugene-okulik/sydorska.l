@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 
-load_dotenv(dotenv_path='/Users/Sidorskiy/sydorska.l/homework/Sydorska_Homework/HW_Lesson_16/.env')
+load_dotenv()
 
 db = mysql.connect(
     user=os.getenv('DB_USER'),
