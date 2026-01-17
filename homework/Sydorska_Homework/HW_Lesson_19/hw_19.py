@@ -7,7 +7,7 @@ def create_new_post():
         "data": {
             "color": "white",
             "size": "medium"
-            }
+                }
             }
     response = requests.post(
         "http://objapi.course.qa-practice.com/object",
@@ -28,7 +28,7 @@ def new_post():
         "data": {
             "color": "multy",
             "size": "small"
-            }
+                }
             }
     response = requests.post(
         "http://objapi.course.qa-practice.com/object",
@@ -60,7 +60,7 @@ def upd_put_post():
         "data": {
             "color": "multy upd",
             "size": "small upd"
-            }
+                }
             }
     response = requests.put(
         f'http://objapi.course.qa-practice.com/object/{post_id}',
@@ -82,7 +82,7 @@ def upd_patch_post():
         "name": "new post by LS upd by patch",
         "data": {
             "size": "small patch"
-            }
+                }
             }
     response = requests.patch(
         f'http://objapi.course.qa-practice.com/object/{post_id}',
