@@ -7,12 +7,12 @@ def create_new_post():
         "data": {
             "color": "white",
             "size": "medium"
-                }
-            }
+        }
+    }
     response = requests.post(
         "http://objapi.course.qa-practice.com/object",
         json=body
-        )
+    )
     assert response.status_code == 200, 'Status code is incorect'
     assert response.json()['name'] == "new post by LS", 'Name is incorrect'
     assert response.json()['data']['color'] == "white", "Color is incorect"
@@ -28,12 +28,12 @@ def new_post():
         "data": {
             "color": "multy",
             "size": "small"
-                }
-            }
+        }
+    }
     response = requests.post(
         "http://objapi.course.qa-practice.com/object",
         json=body
-        )
+    )
     return response.json()['id']
 
 
@@ -60,12 +60,12 @@ def upd_put_post():
         "data": {
             "color": "multy upd",
             "size": "small upd"
-                }
-            }
+        }
+    }
     response = requests.put(
         f'http://objapi.course.qa-practice.com/object/{post_id}',
         json=body
-        )
+    )
     assert response.status_code == 200, 'Status code is incorect'
     assert response.json()['name'] == 'new post by LS upd by put', 'Title does not agreed'
     assert response.json()['data']['color'] == 'multy upd', 'Color does not agreed'
@@ -82,8 +82,8 @@ def upd_patch_post():
         "name": "new post by LS upd by patch",
         "data": {
             "size": "small patch"
-                }
-            }
+        }
+    }
     response = requests.patch(
         f'http://objapi.course.qa-practice.com/object/{post_id}',
         json=body
