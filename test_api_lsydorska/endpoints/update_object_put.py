@@ -2,6 +2,7 @@ from test_api_lsydorska.endpoints.endpoint import Endpoint
 import requests
 import allure
 
+
 class UpdateObjectPut(Endpoint):
 
     @allure.step('Send put request')

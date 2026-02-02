@@ -1,6 +1,5 @@
 import pytest
 import allure
-from test_api_lsydorska.conftest import create_object_id
 
 
 @allure.description('Test POST method for one object (create new object)')
@@ -19,8 +18,6 @@ def test_create_new_object(create_new_object, test_session, each_test, name):
 def test_one_object(create_object_id, each_test, get_object_endpoint):
     response = get_object_endpoint.get_object(create_object_id)
     get_object_endpoint.check_id_is_correct(response)
-    print("TYPE:", type(create_object_id))
-    print("VALUE:", create_object_id)
 
 
 @allure.description('Test PUT method for one object')

@@ -24,5 +24,5 @@ class Endpoint:
 
     @allure.step(f'Validate that correct id has been returned')
     def check_id_is_correct(self, response):
-        with allure.step(f'Validate that id is {response.json()['id']}'):
+        with allure.step(f"Validate that id is {response.json()['id']}"):
             assert self.response.json()['id'] == response.json()['id']
