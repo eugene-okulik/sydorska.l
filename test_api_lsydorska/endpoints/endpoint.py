@@ -22,7 +22,7 @@ class Endpoint:
     def check_size_is_correct(self, response):
         assert response['data']['size'] == response['data']['size'], "Size is incorrect"
 
-    @allure.step(f'Validate that correct id has been returned')
+    @allure.step('Validate that correct id has been returned')
     def check_id_is_correct(self, response):
         with allure.step(f"Validate that id is {response.json()['id']}"):
             assert self.response.json()['id'] == response.json()['id']
